@@ -1,63 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Abhay Srivastava, B.Tech CSE student">
-    <title>Abhay Srivastava - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Abhay Srivastava - Frontend Dev & Cybersecurity Enthusiast" />
+  <title>Abhay Srivastava | Developer & Cybersecurity Enthusiast</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
 </head>
 <body class="dark-mode">
-    <!-- Navbar -->
-    <header class="sticky">
-        <nav class="navbar">
-            <div class="logo">Abhay Srivastava</div>
-            <div class="hamburger" aria-label="Toggle menu" role="button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="dark-mode-toggle">
-                <input type="checkbox" id="dark-mode-switch" checked>
-                <label for="dark-mode-switch" aria-label="Toggle dark mode"></label>
-            </div>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <header class="sticky">
+    <nav class="navbar">
+      <div class="logo">Abhay Srivastava</div>
+      <div class="hamburger" aria-label="Toggle menu" role="button">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-switch" checked />
+        <label for="dark-mode-switch" aria-label="Toggle dark mode"></label>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Hi, I'm Abhay Srivastava</h1>
-                <p class="typing">B.Tech CSE Student | <span id="typing-text"></span></p>
-                <a href="#contact" class="btn">Get in Touch</a>
-            </div>
-        </section>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Hi, I'm <span class="highlight-name">Abhay Srivastava</span> 👋</h1>
+      <p class="hero-subtitle">B.Tech CSE | Frontend Developer | Cybersecurity Enthusiast</p>
+      <p class="hero-desc">
+        I'm passionate about crafting modern, responsive websites and exploring cybersecurity to create secure digital environments. I transform ideas into impactful applications and thrive on continuous learning.
+      </p>
+      <p class="hero-cta">🚀 Open to internships and collaborations. Let's build the future together.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Let's Connect</a>
+        <a href="resume.html" class="btn secondary">Download Resume</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">C++</div>
-                <div class="skill-card">Python</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">HTML & CSS</div>
-                <div class="skill-card">SQL</div>
-                <div class="skill-card">Git</div>
-            </div>
-        </section>
-    </main>
+  <!-- About Me Section -->
+  <section class="about-section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-card glass-effect">
+      <img src="images/profile.jpg" alt="Abhay Srivastava" class="about-img" />
+      <p class="about-text">
+        Hello! I'm <span class="highlight">Abhay Srivastava</span>, a third-year <span class="highlight">B.Tech CSE</span> student passionate about <span class="highlight">Frontend Development</span> and <span class="highlight">Cybersecurity</span>. With hands-on experience in modern web technologies, I'm driven by the mission to create secure and accessible digital experiences. I'm currently exploring innovative projects, learning deeply, and ready to contribute to tech that matters.
+      </p>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Abhay Srivastava. All rights reserved.</p>
-    </footer>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">C++</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Git</div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stat-card">
+      <h3 class="stat-number" data-target="7">0</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat-card">
+      <h3 class="stat-number" data-target="1">0</h3>
+      <p>Internship</p>
+    </div>
+    <div class="stat-card">
+      <h3 class="stat-number" data-target="2026">0</h3>
+      <p>Graduation Year</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Abhay Srivastava. All rights reserved.</p>
+  </footer>
 </body>
 </html>

@@ -42,3 +42,56 @@ const darkModeSwitch = document.getElementById('dark-mode-switch');
 darkModeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('light-mode');
 });
+
+// --- Scroll Animations ---
+const revealElements = document.querySelectorAll('.hero-content, .about-card');
+
+const revealOnScroll = () => {
+  const windowHeight = window.innerHeight;
+  revealElements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+// --- Typewriter Effect ---
+const typewriterText = "Tech Enthusiast • Web Developer • Cybersecurity Learner";
+const subtitleEl = document.querySelector('.hero-subtitle');
+
+let index = 0;
+function typeWriter() {
+  if (subtitleEl && index < typewriterText.length) {
+    subtitleEl.innerHTML += typewriterText.charAt(index);
+    index++;
+    setTimeout(typeWriter, 50);
+  }
+}
+
+window.addEventListener('load', () => {
+  if (subtitleEl) subtitleEl.textContent = ""; // clear default text
+  typeWriter();
+});
+
+
+// Animated stats counter
+const counters = document.querySelectorAll('.stat-number');
+counters.forEach(counter => {
+  counter.innerText = '0';
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / 100;
+    if (count < target) {
+      counter.innerText = `${Math.ceil(count + increment)}`;
+      setTimeout(updateCounter, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
